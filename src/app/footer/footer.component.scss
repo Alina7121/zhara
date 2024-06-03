@@ -1,0 +1,25 @@
+.footer {
+    background-color: #343a40; // Dark gray background color
+    color: #ffffff; // Light text color
+    padding: 2rem 0;
+  
+    a {
+      color: #ffffff; // Link color
+      text-decoration: none;
+  
+      &:hover {
+        text-decoration: underline; 
+        color: red;
+      }
+    }
+  
+    h5 {
+      color: white; // Heading color
+    }
+  
+    .footer-social-icons {
+      list-style: none;
+      padding: 0;
+      }
+    }
+  

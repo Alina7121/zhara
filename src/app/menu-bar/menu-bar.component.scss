@@ -1,0 +1,55 @@
+.navbar {
+    .navbar-brand {
+      font-size: 1.5rem;
+    }
+  
+    .nav-link {
+      padding: 0.5rem 1rem;
+      color: #ffffff; // Default text color for nav links
+      transition: color 0.3s ease;
+  
+      &:hover {
+        color: red; // Example hover color for nav links
+        text-decoration: none; // Remove underline on hover
+      }
+    }
+  
+    .dropdown-menu {
+      background-color: #323436;
+      display: none; // Hide dropdown by default
+    }
+  
+    .dropdown-item {
+      color: white;
+    }
+  
+    .dropdown-item:hover {
+      background-color: rgba(33, 37, 41, 1);
+      color: red;
+    }
+  
+    .dropdown:hover .dropdown-menu {
+      display: block; // Show dropdown menu on hover
+    
+    }
+  
+
+        }
+  
+      .nav-link  {
+        color: #ffffff; // Default text color for nav links
+        transition: color 0.3s ease;
+        
+  
+        &:hover {
+          color: red; // Example hover color for nav links
+          text-decoration: none; // Remove underline on hover
+        }
+      }
+  
+      .btn {
+        margin-left: 25rem; 
+      }
+  
+    
+  

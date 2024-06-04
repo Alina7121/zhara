@@ -1,10 +1,9 @@
 .container {
     position: relative;
-  /*   background-color: #343a40; Dark background color */
     color: #ffffff; /* White text color */
     padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 11px;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
     overflow: hidden; /* Ensure child elements are contained within the container */
   }
   
@@ -19,15 +18,16 @@
     background-size: cover;
     background-position: center;
     opacity: 0.15; /* 15% opacity */
-    z-index: 1;
+    z-index: -1; /* Send the background image behind the content */
+    pointer-events: none; /* Ignore pointer events on the overlay */
   }
   
-  .content {
+ .content {
     position: relative;
-    z-index: 2;
-  }
+    z-index: 1; /* Ensure the content is above the overlay */
+ }
   
-  h1.display-4 {
+  h1.display-2 {
     font-weight: 700;
     color: #ffffff; /* White text color */
   }
@@ -43,4 +43,3 @@
     color: #ffffff; /* White text color */
     margin-bottom: 20px;
   }
-  

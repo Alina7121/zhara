@@ -47,9 +47,21 @@
         }
       }
   
-      .btn {
-        margin-left: 25rem; 
+      .btn { 
+        animation: popUp 1s ease;
       }
   
     
-  
+      .navbar-collapse {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .navbar-nav.center-menu {
+        margin: 0 auto;
+      }
+      
+      .navbar-nav.ml-auto {
+        margin-left: auto;
+      }

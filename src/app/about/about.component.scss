@@ -1,0 +1,46 @@
+.container {
+    position: relative;
+  /*   background-color: #343a40; Dark background color */
+    color: #ffffff; /* White text color */
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensure child elements are contained within the container */
+  }
+  
+  .overlay {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('/zhara/src/assets/images/guitar.png'); /* Path to your background image */
+    background-size: cover;
+    background-position: center;
+    opacity: 0.15; /* 15% opacity */
+    z-index: 1;
+  }
+  
+  .content {
+    position: relative;
+    z-index: 2;
+  }
+  
+  h1.display-4 {
+    font-weight: 700;
+    color: #ffffff; /* White text color */
+  }
+  
+  h2.text-danger {
+    font-weight: 500;
+    color: #dc3545; /* Red color */
+  }
+  
+  .lead {
+    font-size: 1.25rem;
+    line-height: 1.7;
+    color: #ffffff; /* White text color */
+    margin-bottom: 20px;
+  }
+  

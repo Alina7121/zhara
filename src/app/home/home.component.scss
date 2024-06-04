@@ -14,8 +14,12 @@
   .social-links .nav-item {
     display: inline-block;
     margin-right: 10px; /* Adjust spacing between icons */
-  }
+    font-size: 20px;
   
+  }
+  .social-links .nav-item :hover {
+  color:red;
+}
   .home-image-container {
     position: relative;
     display: inline-block;
@@ -32,7 +36,6 @@
     left: 50%;
     transform: translate(-50%, -50%);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-
     background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
     padding: 20px;

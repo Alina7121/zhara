@@ -4,7 +4,7 @@
     padding: 2rem 0;
   
     a {
-      color: #ffffff; // Link color
+      color: white; 
       text-decoration: none;
   
       &:hover {
@@ -22,4 +22,9 @@
       padding: 0;
       }
     }
-  
+  .fab {
+    font-size: 20px;
+    &:hover {
+        color: white; // Hover color
+      }
+    }

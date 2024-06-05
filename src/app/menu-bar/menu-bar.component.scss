@@ -1,67 +1,63 @@
 .navbar {
-    .navbar-brand {
-      font-size: 1.5rem;
-    }
-  
-    .nav-link {
-      padding: 0.5rem 1rem;
-      color: #ffffff; // Default text color for nav links
-      transition: color 0.3s ease;
-  
-      &:hover {
-        color: red; // Example hover color for nav links
-        text-decoration: none; // Remove underline on hover
-      }
-    }
-  
-    .dropdown-menu {
-      background-color: #323436;
-      display: none; // Hide dropdown by default
-    }
-  
-    .dropdown-item {
-      color: white;
-    }
-  
-    .dropdown-item:hover {
-      background-color: rgba(33, 37, 41, 1);
-      color: red;
-    }
-  
-    .dropdown:hover .dropdown-menu {
-      display: block; // Show dropdown menu on hover
-    
-    }
-  
+  .navbar-brand {
+    font-size: 1.5rem;
+  }
 
-        }
-  
-      .nav-link  {
-        color: #ffffff; // Default text color for nav links
-        transition: color 0.3s ease;
-        
-  
-        &:hover {
-          color: red; // Example hover color for nav links
-          text-decoration: none; // Remove underline on hover
-        }
-      }
-  
-      .btn { 
-        animation: popUp 1s ease;
-      }
-  
-    
-      .navbar-collapse {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      
-      .navbar-nav.center-menu {
-        margin: 0 auto;
-      }
-      
-      .navbar-nav.ml-auto {
-        margin-left: auto;
-      }
+  .nav-link {
+    padding: 0.5rem 1rem;
+    color: #ffffff; // Default text color for nav links
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: red; // Example hover color for nav links
+      text-decoration: none; // Remove underline on hover
+    }
+  }
+
+  .dropdown-menu {
+    background-color: #323436;
+    display: none; // Hide dropdown by default
+  }
+
+  .dropdown-item {
+    color: white;
+  }
+
+  .dropdown-item:hover {
+    background-color: rgba(33, 37, 41, 1);
+    color: red;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block; // Show dropdown menu on hover
+  }
+
+  .btn {
+    animation: popUp 1s ease;
+  }
+
+  .navbar-collapse {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .navbar-nav {
+    &.mx-auto {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+    }
+
+    &.ml-auto {
+      margin-left: auto;
+    }
+  }
+}
+.nav-link.active, .dropdown-item.active {
+  color: red !important; // Change the active link color to red
+}
+
+.dropdown-item.active {
+  background-color: transparent; // Ensure no background color change for active state
+}

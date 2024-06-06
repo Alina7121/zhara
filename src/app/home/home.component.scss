@@ -1,97 +1,91 @@
-.home-container {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .social-links {
-    list-style-type: none;
-    position: absolute;
-    top: 20px;
-    right: 70px;
-    z-index: 1000; /* Ensure it's above other content */
-  }
-  
-  .social-links .nav-item {
-    display: inline-block;
-    margin-right: 10px; /* Adjust spacing between icons */
-    font-size: 15px;
-  
-  }
-  .social-links .nav-item :hover {
-  color:red;
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  width: 90%; /* Adjust width as per your design */
+  max-width: 400px; /* Adjust maximum width as per your design */
 }
-  .home-image-container {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .home-image {
-    width: 100%; /* Adjust as needed */
-    height: auto; /* Maintain aspect ratio */
-  }
-  
+
+.text-large {
+  font-size: 32px; /* Larger font size for date */
+  margin-bottom: 10px; /* Adjust spacing between date and address */
+  font-weight: bold;
+}
+
+.text-small {
+  font-size: 18px; /* Smaller font size for address */
+}
+
+.countdown-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px; /* Adjust spacing between countdown and date/address */
+}
+
+.countdown-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 10px;
+  padding: 10px;
+  background-color: rgba(255, 255, 255, 0.1); /* Light background color */
+  border-radius: 5px;
+}
+
+.countdown-value {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.countdown-value span {
+  transition: transform 0.5s ease;
+  display: inline-block;
+}
+
+.countdown-label {
+  font-size: 14px;
+  text-transform: uppercase;
+  margin-top: 5px;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
   .overlay {
-    position: absolute;
-    top:20%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    padding: 20px;
-    text-align: center;
+    max-width: 300px;
+    padding: 10px;
+    width: 100%;
+    max-width: none;
   }
-  
+
+  .countdown-container {
+    flex-direction: column;
+  }
+
   .text-large {
-    font-size: 48px; /* Larger font size for date */
-    margin-bottom: 10px; /* Adjust spacing between date and address */
-    font-weight: bold;
+    font-size: 16px;
   }
-  .text-extra-large {
-    font-size: 86px; /* Medium font size for event title */
-    margin-bottom: 100px; /* Adjust spacing between title and address */
-    font-weight: bold; /* Bold font weight for title */
-    color:red;}
 
   .text-small {
-    font-size: 24px; /* Smaller font size for address */
-  }
-  .countdown-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-  
-  .countdown-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 10px;
-    padding: 10px;
-    background-color: rgba(255, 255, 255, 0.1); /* Light background color */
-    border-radius: 5px;
-  }
-  
-  .countdown-value {
-    font-size: 32px;
-    display: flex;
-    align-items: center;
-  }
-  
-  .countdown-value span {
-    transition: transform 0.5s ease;
-    display: inline-block;
-  }
-  
-  .countdown-label {
     font-size: 16px;
-    text-transform: uppercase;
-    margin-top: 5px;
-    color: #ccc;
   }
-  
-  @media (max-width: 768px) {
-    .countdown-container {
-      flex-direction: column;
-    }
+
+  .countdown-item {
+    margin: 5px 0;
   }
+
+  .countdown-value {
+    font-size: 18px;
+  }
+
+  .countdown-label {
+    font-size: 12px;
+  }
+}

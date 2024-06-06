@@ -1,34 +1,37 @@
-.contact-info {
-    p {
-      margin-bottom: 10px;
-    
+.container {
+    .row {
+      display: flex;
+      flex-wrap: wrap; // Ensure rows wrap on smaller screens
     }
-}
-/* Custom SCSS styles */
-.row {
-    display: flex;
-  }
   
-  .col-md-4 {
-    flex: 1; /* Equal width for all columns */
-  }
+    .col-md-4 {
+      flex: 1 1 100%; // Equal width columns, full width on smaller screens
+      max-width: calc(33.333333% - 1rem); // Maintain 3-column layout on large screens
+      margin-bottom: 1rem;
+      padding: 0 0.5rem;
   
-  .text-center {
-    text-align: center;
-  }
+      @media (max-width: 992px) {
+        max-width: 100%; // Full width on smaller screens
+      }
+    }
   
-  .embed-responsive {
-    position: relative;
-    overflow: hidden;
-    padding-bottom: 56.25%; /* 16:9 aspect ratio */
-    height: 0;
-  }
+    .text-center {
+      text-align: center;
+    }
   
-  .embed-responsive-item {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    .embed-responsive {
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+  
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+    }
   }
   

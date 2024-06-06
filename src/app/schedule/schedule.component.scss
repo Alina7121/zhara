@@ -1,0 +1,86 @@
+.card-wrapper {
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  
+  .card-wrapper.animate {
+    opacity: 1;
+    transform: scale(1);
+  }
+  
+  .card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+  }
+  
+  .card .btn {
+    transition: transform 0.3s ease;
+  }
+  
+  .card .btn:hover {
+    transform: scale(1.1);
+  }
+  
+.container {
+    padding-top: 0;
+  }
+  
+  .card {
+    border: 5px solid rgba(0, 0, 0, 0.221);
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.952); 
+    transition: transform 0.3s, box-shadow 0.3s; 
+  }
+  
+
+  
+  .card-img-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    height: 300px; 
+    object-fit: cover;
+  }
+  
+  .card-body {
+    padding: 20px;
+  }
+  
+  .btn-danger { 
+    border: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+  
+  .btn-danger:hover {
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .animate-card {
+    opacity: 0;
+    transform: scale(0.8);
+    animation: popIn 0.2s ease-out forwards;
+  }
+  
+  @keyframes popIn {
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
+  @media (min-width: 768px) {
+    .card-body {
+      padding: 15px;
+    }
+  
+    .card-title {
+      font-size: 1.2rem;
+    }
+  
+    .card-text {
+      font-size: 0.9rem;
+    }
+  }

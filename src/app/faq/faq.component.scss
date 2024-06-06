@@ -1,0 +1,26 @@
+h1.display-2 {
+    font-weight: 700;
+    color: #ffffff; /* White text color */
+  }
+.accordion-header {
+    cursor: pointer;
+    background-color: #242222;
+    padding: 10px;
+    margin-bottom: 0;
+    font-weight: 300;
+  }
+  
+  .accordion-content {
+    padding: 10px;
+    background-color: #403c3c8c;
+    border: 1.5px solid #555252;
+    border-top: none;
+  }
+  h3{
+    padding-top: 20px;
+  }
+
+  .custom-tooltip {
+    color: white;
+    font-size: 14px;
+  }

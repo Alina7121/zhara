@@ -1,1 +1,20 @@
-<p>schedule works!</p>
+<div class="container mt-5">
+<div class="text-center mt-4">
+    <a href="assets/images/schedule.jpg" class="btn btn-danger">Download Schedule</a>
+  </div>
+
+<br>
+    <div class="row">
+      <div *ngFor="let band of bands; let i = index" class="col-md-4 card-wrapper" [ngClass]="{ 'animate': animateCards[i] }">
+        <div class="card">
+          <img [src]="band.image" class="card-img-top" [alt]="band.name">
+          <div class="card-body">
+            <h5 class="card-title">{{ band.name }}</h5>
+            <p class="card-text">{{ band.description }}</p>
+            <a [href]="band.youtubeLink" class="btn btn-danger ">Listen Now</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

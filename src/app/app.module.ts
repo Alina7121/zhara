@@ -12,7 +12,9 @@ import { ScheduleComponent } from './schedule/schedule.component';
 import { GetInvolvedComponent } from './get-involved/get-involved.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { FooterComponent } from './footer/footer.component';
-
+import { MatTooltipModule } from '@angular/material/tooltip';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,9 +31,13 @@ import { FooterComponent } from './footer/footer.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MatTooltipModule
   ],
-  providers: [],
+  providers: [
+    provideAnimationsAsync()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,39 @@
+.home-container {
+  position: relative;
+  display: inline-block;
+}
+
+.social-links {
+  list-style-type: none;
+  position: absolute;
+  top: 20px;
+  right: 70px;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.social-links .nav-item {
+  display: inline-block;
+  margin-right: 10px; /* Adjust spacing between icons */
+  font-size: 15px;
+}
+
+.social-links .nav-item:hover {
+  color: red;
+}
+
+.home-image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.carousel .img-main {
+  width: 100%;
+  height: auto; /* Maintain aspect ratio */
+}
+
 .overlay {
   position: absolute;
-  top: 50%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%, -50%);
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
@@ -8,25 +41,30 @@
   color: #fff;
   padding: 20px;
   text-align: center;
-  width: 90%; /* Adjust width as per your design */
-  max-width: 400px; /* Adjust maximum width as per your design */
+  z-index: 1000; /* Ensure it's above carousel */
 }
 
 .text-large {
-  font-size: 32px; /* Larger font size for date */
+  font-size: 48px; /* Larger font size for date */
   margin-bottom: 10px; /* Adjust spacing between date and address */
   font-weight: bold;
 }
 
+.text-extra-large {
+  font-size: 86px; /* Medium font size for event title */
+  margin-bottom: 100px; /* Adjust spacing between title and address */
+  font-weight: bold; /* Bold font weight for title */
+  color: red;
+}
+
 .text-small {
-  font-size: 18px; /* Smaller font size for address */
+  font-size: 24px; /* Smaller font size for address */
 }
 
 .countdown-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-bottom: 20px; /* Adjust spacing between countdown and date/address */
 }
 
 .countdown-item {
@@ -40,7 +78,7 @@
 }
 
 .countdown-value {
-  font-size: 24px;
+  font-size: 32px;
   display: flex;
   align-items: center;
 }
@@ -51,41 +89,29 @@
 }
 
 .countdown-label {
-  font-size: 14px;
+  font-size: 16px;
   text-transform: uppercase;
   margin-top: 5px;
   color: #ccc;
 }
 
 @media (max-width: 768px) {
-  .overlay {
-    max-width: 300px;
-    padding: 10px;
-    width: 100%;
-    max-width: none;
+  .countdown-container {
+    display: none; /* Hide countdown on mobile */
   }
 
-  .countdown-container {
-    flex-direction: column;
+  .overlay {
+    top: 30%; /* Adjust position for mobile */
+    left: 50%;
+    transform: translate(-50%, -30%);
+    padding: 10px;
   }
 
   .text-large {
-    font-size: 16px;
+    font-size: 24px; /* Adjust font size for mobile */
   }
 
   .text-small {
-    font-size: 16px;
-  }
-
-  .countdown-item {
-    margin: 5px 0;
-  }
-
-  .countdown-value {
-    font-size: 18px;
-  }
-
-  .countdown-label {
-    font-size: 12px;
+    font-size: 12px; /* Adjust font size for mobile */
   }
 }

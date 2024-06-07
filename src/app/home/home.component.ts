@@ -13,6 +13,21 @@ export class HomeComponent implements OnInit, OnDestroy {
   seconds: number;
   countdownInterval: any;
 
+  images: string[] = [
+    'assets/images/img1.jpg',
+    'assets/images/img4.jpg',
+    'assets/images/img5.jpg',
+    'assets/images/img6.jpg',
+    'assets/images/img7.jpg',
+    'assets/images/img8.jpg',
+    'assets/images/img10.jpg',
+    'assets/images/img11.jpg',
+    'assets/images/img12.jpg',
+    'assets/images/img14.jpg',
+    'assets/images/img15.jpg',
+    'assets/images/img20.jpg'
+  ];
+
   constructor() {
     this.days = 0;
     this.hours = 0;
@@ -29,24 +44,17 @@ export class HomeComponent implements OnInit, OnDestroy {
   }
 
   initializeCountdown(): void {
-    // Set the date we're counting down to
     const countDownDate = new Date("June 29, 2024 00:00:00").getTime();
 
-    // Update the countdown every 1 second
     this.countdownInterval = setInterval(() => {
-      // Get the current date and time
       const now = new Date().getTime();
-
-      // Find the distance between now and the countdown date
       const distance = countDownDate - now;
 
-      // Time calculations for days, hours, minutes and seconds
       this.days = Math.floor(distance / (1000 * 60 * 60 * 24));
       this.hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
       this.minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
       this.seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-      // If the countdown is over, clear the interval
       if (distance < 0) {
         clearInterval(this.countdownInterval);
         this.days = 0;
@@ -54,7 +62,6 @@ export class HomeComponent implements OnInit, OnDestroy {
         this.minutes = 0;
         this.seconds = 0;
       }
-    }, 1000); // Update every 1 second
+    }, 1000);
   }
-
 }

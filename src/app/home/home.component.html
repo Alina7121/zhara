@@ -1,21 +1,37 @@
 <div class="home-container">
   <!-- Social Media Links -->
   <ul class="social-links">
-    
-      <li class="nav-item">
-        <a class="nav-link" href="https://www.facebook.com/barsukfest/" target="_blank"><i class="fab fa-facebook"></i></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://www.instagram.com/zhara_toronto?igsh=MXZucmszZGNrbGo5cA==" target="_blank"><i class="fab fa-instagram"></i></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="https://www.youtube.com/BarsukTV18" target="_blank"><i class="fab fab fa-youtube"></i></a>
-      </li>
-      
+    <li class="nav-item">
+      <a class="nav-link" href="https://www.facebook.com/barsukfest/" target="_blank"><i class="fab fa-facebook"></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="https://www.instagram.com/zhara_toronto?igsh=MXZucmszZGNrbGo5cA==" target="_blank"><i class="fab fa-instagram"></i></a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="https://www.youtube.com/BarsukTV18" target="_blank"><i class="fab fa-youtube"></i></a>
+    </li>
   </ul>
   <!-- Main Image Container -->
   <div class="home-image-container">
-    <img src="assets/images/home.jpg" alt="Lake and people jumping into water at music festival Zhara" class="home-image">
+    <!-- Fullscreen Image Carousel -->
+    <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+      <div class="carousel-inner">
+        <div *ngFor="let image of images; let i = index" [ngClass]="{'carousel-item': true, 'active': i === 0}">
+          <img [src]="image" class="d-block w-100 img-main" alt="Main Image">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+        data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+    <!-- Countdown Overlay -->
     <div class="overlay">
       <div class="countdown-container">
         <div class="countdown-item">
@@ -46,6 +62,5 @@
       <div class="text-large">June 29th - July 1st</div>
       <div class="text-small">15 Trudeau Lane, Tweed, ON</div>
     </div>
-    
   </div>
 </div>

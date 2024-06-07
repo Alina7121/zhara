@@ -97,21 +97,29 @@
 
 @media (max-width: 768px) {
   .countdown-container {
-    display: none; /* Hide countdown on mobile */
+    flex-direction: column;
   }
 
   .overlay {
-    top: 30%; /* Adjust position for mobile */
+    top: 30%;
     left: 50%;
     transform: translate(-50%, -30%);
     padding: 10px;
   }
 
   .text-large {
-    font-size: 24px; /* Adjust font size for mobile */
+    font-size: 24px;
   }
 
   .text-small {
-    font-size: 12px; /* Adjust font size for mobile */
+    font-size: 12px;
+  }
+
+  .countdown-value {
+    font-size: 16px;
+  }
+
+  .countdown-label {
+    font-size: 12px;
   }
 }

@@ -15,6 +15,7 @@ export class HomeComponent implements OnInit, OnDestroy {
 
   images: string[] = [
     'assets/images/img1.jpg',
+    'assets/images/img3.jpg',
     'assets/images/img4.jpg',
     'assets/images/img5.jpg',
     'assets/images/img6.jpg',
@@ -23,8 +24,11 @@ export class HomeComponent implements OnInit, OnDestroy {
     'assets/images/img10.jpg',
     'assets/images/img11.jpg',
     'assets/images/img12.jpg',
+    'assets/images/img13.jpg',
     'assets/images/img14.jpg',
     'assets/images/img15.jpg',
+    'assets/images/img16.jpg',
+    'assets/images/img17.jpg',
     'assets/images/img20.jpg'
   ];
 

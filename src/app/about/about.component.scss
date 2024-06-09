@@ -1,58 +1,75 @@
 .container {
-    position: relative;
-    color: #ffffff; /* White text color */
-    padding: 40px;
-    border-radius: 11px;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
-    overflow: hidden; /* Ensure child elements are contained within the container */
+  position: relative;
+  color: #ffffff; /* White text color */
+  padding: 40px;
+  border-radius: 11px;
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+  overflow: hidden; /* Ensure child elements are contained within the container */
+  animation: fadeInAnimation 1s ease-in-out forwards; /* Fade-in animation for the container */
+  opacity: 0;
+}
+
+.overlay {
+  content: "";
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('/assets/images/guitar.png'); /* Adjust path to your background image */
+  background-size: cover;
+  background-position: center;
+  opacity: 0.15; /* 15% opacity */
+  z-index: -1; /* Send the background image behind the content */
+  pointer-events: none; /* Ignore pointer events on the overlay */
+}
+
+.content {
+  position: relative;
+  z-index: 1; /* Ensure the content is above the overlay */
+}
+
+h1.display-2,
+h2.text-danger,
+.lead,
+h3.fw-normal {
+  opacity: 0; /* Initial opacity for text */
+  animation: slideInAnimation 1s ease-in-out forwards;
+}
+
+.food-image {
+  background: none; /* Remove background */
+  opacity: 0; /* Initial opacity for image */
+  animation: scaleInAnimation 1s ease-in-out forwards;
+}
+
+@keyframes fadeInAnimation {
+  from {
+    opacity: 0;
   }
-  
-  .overlay {
-    content: "";
-    position: absolute;
-    top: 10%;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('/assets/images/guitar.png'); /* Adjust path to your background image */
-    background-size: cover;
-    background-position: center;
-    opacity: 0.15; /* 15% opacity */
-    z-index: -1; /* Send the background image behind the content */
-    pointer-events: none; /* Ignore pointer events on the overlay */
+  to {
+    opacity: 1;
   }
-  
-  .content {
-    position: relative;
-    z-index: 1; /* Ensure the content is above the overlay */
+}
+
+@keyframes slideInAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(-50px);
   }
-  
-  h1.display-2 {
-    font-weight: 700;
-    color: #ffffff; /* White text color */
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  
-  h2.text-danger {
-    font-weight: 500;
-    color: #dc3545; /* Red color */
+}
+
+@keyframes scaleInAnimation {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
   }
-  
-  .lead {
-    font-size: 1.25rem;
-    line-height: 1.7;
-    color: #ffffff; /* White text color */
-    margin-bottom: 20px;
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
-  .food-image {
-    background: none; /* Remove background */
-  }
-  .shadow-sm {
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
-  }
-  h2 {
-    color: red;
-    font-size: 2.5em;
-  }
-  h3.fw-normal {
-    font-weight: normal; /* Make h3 tags not bold */
-  }
+}

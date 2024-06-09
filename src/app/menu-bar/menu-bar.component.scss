@@ -37,9 +37,11 @@
   }
 
   .navbar-collapse {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: none; // Hide the menu by default
+  }
+
+  .navbar-collapse.show {
+    display: flex; // Show the menu when .show class is added
   }
 
   .navbar-nav {
@@ -54,7 +56,9 @@
     }
   }
 }
-.nav-link.active, .dropdown-item.active {
+
+.nav-link.active,
+.dropdown-item.active {
   color: red !important; // Change the active link color to red
 }
 

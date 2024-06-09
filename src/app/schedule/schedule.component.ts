@@ -21,12 +21,6 @@ export class ScheduleComponent implements OnInit {
       youtubeLink: 'https://www.youtube.com/watch?app=desktop&v=krhZ61XBv6E'
     },
     {
-      name: 'Anastheia Band',
-      description: 'This is a description for Band 2.',
-      image: 'assets/images/bands/nastya.jpg',
-      youtubeLink: 'https://www.youtube.com/watch?v=3cE1nObOFnQ'
-    },
-    {
       name: 'HypnoPussy',
       description: 'This is a description for Band 2.',
       image: 'assets/images/bands/hypnopussy.jpg',

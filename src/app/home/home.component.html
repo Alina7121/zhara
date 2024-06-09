@@ -16,7 +16,7 @@
     <!-- Fullscreen Image Carousel -->
     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
       <div class="carousel-inner">
-        <div *ngFor="let image of images; let i = index" [ngClass]="{'carousel-item': true, 'active': i === 0}">
+        <div *ngFor="let image of images; let i = index" class="carousel-item" [class.active]="i === 0">
           <img [src]="image" class="d-block w-100 img-main" alt="Main Image">
         </div>
       </div>

@@ -6,7 +6,6 @@ import { MenuBarComponent } from './menu-bar/menu-bar.component';
 import { HomeComponent } from './home/home.component';
 import { TicketsComponent } from './tickets/tickets.component';
 import { AboutComponent } from './about/about.component';
-import { GalleryComponent } from './gallery/gallery.component';
 import { FaqComponent } from './faq/faq.component';
 import { ScheduleComponent } from './schedule/schedule.component';
 import { GetInvolvedComponent } from './get-involved/get-involved.component';
@@ -22,7 +21,6 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
     HomeComponent,
     TicketsComponent,
     AboutComponent,
-    GalleryComponent,
     FaqComponent,
     ScheduleComponent,
     GetInvolvedComponent,
